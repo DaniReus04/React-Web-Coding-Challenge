@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 .react-datepicker__input-container input {
-  @apply block w-full text-base md:text-sm bg-white border border-gray-300 rounded shadow-sm w-40;
+  @apply block w-40 text-base font-medium bg-white border-2 border-slate-900 shadow-sm px-2;
 }
 
 .react-datepicker-popper {
-  @apply z-40 w-72 text-sm bg-white shadow px-3 py-2 border-2 border-gray-200 rounded;
+  @apply z-40 w-72 text-sm bg-white shadow px-3 py-2 border-2 border-slate-800;
 }
 
 .react-datepicker-left {
@@ -77,25 +77,25 @@
 }
 
 .react-datepicker__day--in-selecting-range {
-  @apply bg-blue-200;
+  @apply bg-slate-300;
 }
 
 .react-datepicker__day--selecting-range-start {
-  @apply bg-white border-2 border-blue-500;
+  @apply bg-white border-2 border-slate-500;
 }
 
 .react-datepicker__day--selecting-range-end {
-  @apply bg-white border-2 border-blue-500;
+  @apply bg-white border-2 border-slate-500;
 }
 
 .react-datepicker__day--selected {
-  @apply bg-blue-500 text-white;
+  @apply bg-slate-500 text-white;
 }
 
 .react-datepicker__day--range-start {
-  @apply bg-blue-500 text-white hover:text-gray-700 hover:bg-white;
+  @apply bg-slate-500 text-white hover:text-gray-700 hover:bg-white;
 }
 
 .react-datepicker__day--range-end {
-  @apply bg-blue-500 text-white hover:text-gray-700 hover:bg-white;
+  @apply bg-slate-500 text-white hover:text-gray-700 hover:bg-white;
 }

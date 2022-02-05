@@ -6,8 +6,8 @@ function BikesList({ bikes }) {
 
   console.log("bikes:", stolenBike);
   return (
-    <div className="flex justify-center">
-      <ul>
+    <div className="flex w-full">
+      <ul className="w-full">
         {stolenBike.map((bike) => (
           <li key={bike.id} className="py-4">
             <div className="flex border-2 border-black">
@@ -26,7 +26,7 @@ function BikesList({ bikes }) {
                   />
                 )}
               </figure>
-              <div className="flex flex-col justify-center py-4 max-w-lg font-medium">
+              <div className="flex flex-col justify-center py-4 font-medium">
                 <p className="text-blue-700">
                   {bike.title}({bike.frame_colors})
                 </p>

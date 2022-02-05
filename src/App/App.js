@@ -15,8 +15,8 @@ function App() {
   }, []);
   return (
     <>
-      <Header />
-      <div className="App">
+      <div className="w-full max-w-5xl mt-0 mx-auto">
+        <Header />
         <Home bikes={bikes} />
       </div>
     </>

@@ -3,7 +3,7 @@ import Search from "../../components/Search";
 
 function Home({ bikes }) {
   return (
-    <div>
+    <div className="w-full">
       <Search />
       <Bikes bikes={bikes} />
     </div>
