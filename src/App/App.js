@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Home from "../Pages/Home";
+import Header from "../components/Header";
 
 function App() {
   const [bikes, setBikes] = useState([]);
@@ -13,9 +14,12 @@ function App() {
     fetchBikes();
   }, []);
   return (
-    <div className="App">
-      <Home bikes={bikes} />
-    </div>
+    <>
+      <Header />
+      <div className="App">
+        <Home bikes={bikes} />
+      </div>
+    </>
   );
 }
 
