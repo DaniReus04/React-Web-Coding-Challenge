@@ -17,8 +17,6 @@
     "web-vitals": "^2.1.4"
   },
   
-  "homepage": "https:/DaniReus04.github.io/React-Web-Coding-Challenge",
-  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
