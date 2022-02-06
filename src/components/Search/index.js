@@ -3,10 +3,11 @@ import DatePicker from "react-datepicker";
 import Calendar from "../../Assets/Images/calendar.png";
 import BikeHub from "../BikeHub";
 
-function Search({ colors, model, location, name, stolen }) {
+function Search({ stolen }) {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
   const [querry, setQuerry] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const [txt, setTxt] = useState(false);
   const [initialDate, setInitialDate] = useState(false);
@@ -24,6 +25,7 @@ function Search({ colors, model, location, name, stolen }) {
   };
 
   const onSubmit = (e) => {
+    setLoading(true);
     e.preventDefault();
 
     if (querry.length > 0) {
@@ -38,6 +40,9 @@ function Search({ colors, model, location, name, stolen }) {
       setInitialDate(true);
       console.log("initial:", initialDate);
     }
+    setTimeout(() => {
+      setLoading(false);
+    }, 600);
   };
 
   return (
@@ -98,12 +103,19 @@ function Search({ colors, model, location, name, stolen }) {
           </button>
         )}
       </form>
-      <BikeHub
-        stolen={stolen}
-        txt={txt}
-        initial={initialDate}
-        final={finalDate}
-      />
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <BikeHub
+          stolen={stolen}
+          txt={txt}
+          initial={initialDate}
+          final={finalDate}
+          querry={querry}
+          startDate={startDate}
+          endDate={endDate}
+        />
+      )}
     </>
   );
 }
