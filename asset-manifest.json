@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/DaniReus04.github.io/React-Web-Coding-Challenge/static/css/main.c4893452.css",
+    "main.js": "/DaniReus04.github.io/React-Web-Coding-Challenge/static/js/main.a4169de1.js",
+    "static/js/787.7456e83e.chunk.js": "/DaniReus04.github.io/React-Web-Coding-Challenge/static/js/787.7456e83e.chunk.js",
+    "static/media/berlin-police-logo.png": "/DaniReus04.github.io/React-Web-Coding-Challenge/static/media/berlin-police-logo.8416104710014fd08bef.png",
+    "index.html": "/DaniReus04.github.io/React-Web-Coding-Challenge/index.html",
+    "main.c4893452.css.map": "/DaniReus04.github.io/React-Web-Coding-Challenge/static/css/main.c4893452.css.map",
+    "main.a4169de1.js.map": "/DaniReus04.github.io/React-Web-Coding-Challenge/static/js/main.a4169de1.js.map",
+    "787.7456e83e.chunk.js.map": "/DaniReus04.github.io/React-Web-Coding-Challenge/static/js/787.7456e83e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4893452.css",
+    "static/js/main.a4169de1.js"
+  ]
+}
