@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
 import Header from "../components/Header";
+import Cases from "../Pages/Cases";
 
 function App() {
   const [bikes, setBikes] = useState([]);
@@ -15,10 +17,15 @@ function App() {
   }, []);
   return (
     <>
-      <div className="w-full max-w-5xl mt-0 mx-auto">
-        <Header />
-        <Home bikes={bikes} />
-      </div>
+      <Router>
+        <div className="w-full max-w-5xl mt-0 mx-auto">
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Home bikes={bikes} />} />
+            <Route exact path="/case/:id" element={<Cases />} />
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
