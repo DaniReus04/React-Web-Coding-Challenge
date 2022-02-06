@@ -17,7 +17,7 @@ function App() {
   }, []);
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="w-full max-w-5xl mt-0 mx-auto">
           <Header />
           <Routes>
