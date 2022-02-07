@@ -19,6 +19,15 @@ function BikeHub({ stolen, txt, initial, final, endDate, startDate, querry }) {
   if (txt && title.length === 0 && initial === false && final === false) {
     return <div>Empty Search</div>;
   }
+  if (txt && title.length === 0 && initial === true && final === false) {
+    return <div>Empty Search</div>;
+  }
+  if (txt && title.length === 0 && initial === false && final === true) {
+    return <div>Empty Search</div>;
+  }
+  if (txt && title.length === 0 && initial === true && final === true) {
+    return <div>Empty Search</div>;
+  }
   if (initial && txt === false && final === false) {
     const start = format(startDate, "T");
     const beginDate = stolen.filter((item) => item.date_stolen * 1000 >= start);
