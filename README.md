@@ -16,7 +16,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Install all the dependences to the project run.
+Install all the dependences to the project run. \
 To read more about: (https://www.npmjs.com/package/react)
 
 ### `npm start`
