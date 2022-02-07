@@ -103,6 +103,7 @@ function Search({ stolen }) {
           </button>
         )}
       </form>
+      <p className="flex justify-end">Total: {stolen.length}</p>
       {loading ? (
         <p>Loading...</p>
       ) : (
