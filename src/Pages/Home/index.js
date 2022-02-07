@@ -41,7 +41,7 @@ function Home() {
         <p>loading</p>
       ) : (
         <>
-          {" "}
+          <div className="font-semibold">Page: {currentPage}</div>
           <Search stolen={stolenBike} />
           <ReactPaginate
             nextLabel={
