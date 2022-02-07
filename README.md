@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Diagram
 
-(https://github.com/DaniReus04/React-Web-Coding-Challenge/blob/master/src/Assets/Images/Diagram.png)
+[https://github.com/DaniReus04/React-Web-Coding-Challenge/blob/master/src/Assets/Images/Diagram.png](https://github.com/DaniReus04/React-Web-Coding-Challenge/blob/master/src/Assets/Images/Diagram.png)
 
 ## Available Scripts
 
@@ -17,7 +17,7 @@ In the project directory, you can run:
 ### `npm install`
 
 Install all the dependences to the project run. \
-To read more about: (https://www.npmjs.com/package/react)
+To read more about: [https://www.npmjs.com/package/react](https://www.npmjs.com/package/react)
 
 ### `npm start`
 
