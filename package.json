@@ -1,7 +1,7 @@
 {
   "name": "react-web-coding-challenge",
   "version": "0.1.0",
-  "homepage": "https://danireus04.github.io/React-Web-Coding-Challenge/",
+  "homepage": "React-Web-Coding-Challenge/",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^2.7.0",
