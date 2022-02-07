@@ -7,13 +7,16 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  const fetchBikes = async () => {
+  const fetchBikes = async (currentlyPage = 1) => {
     setLoading(true);
-    console.log("currentPage:", currentPage);
     await fetch(
-      `https://bikeindex.org/api/v3/search?page=${currentPage}&per_page=10&stolenness=stolen`
-    ).then((res) => res.json().then((res) => setBikes(res.bikes)));
-    console.log("currentPage:", currentPage);
+      `https://bikeindex.org/api/v3/search?page=${currentlyPage}&per_page=10&stolenness=stolen`
+    ).then((res) =>
+      res.json().then((res) => {
+        setBikes(res.bikes);
+        setCurrentPage(currentlyPage);
+      })
+    );
     setTimeout(() => {
       setLoading(false);
     }, 600);
@@ -23,13 +26,13 @@ function Home() {
     fetchBikes();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log("bikes:", bikes);
 
   const stolenBike = bikes.filter((bike) => bike.stolen);
 
-  const handleSelectPage = (data) => {
+  const handleSelectPage = async (data) => {
     let currentlyPage = data.selected + 1;
-    setCurrentPage(currentlyPage);
+    await fetchBikes(currentlyPage);
+    console.log("data:", data);
   };
 
   return (
@@ -41,10 +44,26 @@ function Home() {
           {" "}
           <Search stolen={stolenBike} />
           <ReactPaginate
-            nextLabel={"Next >"}
-            previousLabel={"< Prev"}
+            nextLabel={
+              <button
+                onClick={() => {
+                  fetchBikes(currentPage + 1);
+                }}
+              >
+                Next &gt;&gt;
+              </button>
+            }
+            previousLabel={
+              <button
+                onClick={() => {
+                  fetchBikes(currentPage - 1);
+                }}
+              >
+                &lt;&lt; Prev
+              </button>
+            }
             pageCount={10}
-            pageRangeDisplayed={3}
+            pageRangeDisplayed={10}
             marginPagesDisplayed={0}
             breakLabel={""}
             onPageChange={handleSelectPage}
